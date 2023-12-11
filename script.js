@@ -34,7 +34,7 @@ function changeFontColor() {
 function left(){
     document.querySelectorAll('.left').forEach(function(element){
 element.addEventListener('click',function(){
-    document.getElementById('cEditor').style.textAlign='left'
+    document.getElementById('containereditor').style.textAlign='left'
 })
 
     })
@@ -43,7 +43,7 @@ element.addEventListener('click',function(){
 function center(){
     document.querySelectorAll('.center').forEach(function(element){
 element.addEventListener('click',function(){
-    document.getElementById('cEditor').style.textAlign='center'
+    document.getElementById('containereditor').style.textAlign='center'
 })
 
     })
@@ -52,7 +52,7 @@ element.addEventListener('click',function(){
 function right(){
     document.querySelectorAll('.right').forEach(function(element){
 element.addEventListener('click',function(){
-    document.getElementById('cEditor').style.textAlign='right'
+    document.getElementById('containereditor').style.textAlign='right'
 })
 
     })
@@ -61,14 +61,14 @@ element.addEventListener('click',function(){
 function justify(){
     document.querySelectorAll('.justify').forEach(function(element){
 element.addEventListener('click',function(){
-    document.getElementById('cEditor').style.textAlign='justify'
+    document.getElementById('containereditor').style.textAlign='justify'
 })
 
     })
 }
 
 //Undo Redo
-var editor = document.getElementById('cEditor');
+var editor = document.getElementById('containereditor');
 var contentHistory = [];
 var alignmentHistory = [];
 var selectionHistory = [];
@@ -141,7 +141,7 @@ function restoreSelection(selection) {
     }
 }
 
-document.querySelectorAll('#cEditor').forEach(function (element) {
+document.querySelectorAll('#containereditor').forEach(function (element) {
     element.addEventListener('input', function () {
         saveState();
     });
